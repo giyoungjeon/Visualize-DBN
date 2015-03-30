@@ -1,6 +1,7 @@
 function [ X_ ] = grad_ascent( D, X )
 %GRAD_ASCENT Summary of this function goes here
 %   Detailed explanation goes here
+    pp = parpool('local',512);
     function [o] = tarfun(X)
         h0 = cell(3,1);
         p0 = cell(3,1);
@@ -32,5 +33,5 @@ function [ X_ ] = grad_ascent( D, X )
         end
         X= X + grad*learn_rate;
     end
-    
+    delete(pp);
 end
