@@ -1,13 +1,12 @@
 load('dbn_mnist_D.mat');
 
 rho=10;
-x0 = rand(14);
-x0 = x0 / norm(x0)*rho;
-x0 = reshape(x0, 14*14,1)';
-x_ = grad_ascent2(D,x0,rho);
-
-
-% figure;
-% imshow(reshape(x0, 14,14)');
+warning('off','all');
 figure;
-imshow(reshape(x_, 14, 14)');
+for i=1:100
+    disp(sprintf('optimizing unit %d\n',i));
+    x_ = grad_ascent(D,rho,i);
+    subplot(10,10,i);
+    imshow(reshape(x_, 14, 14)');
+%     title(sprintf('unit %d\n',i));
+end
