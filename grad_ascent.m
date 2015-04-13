@@ -1,4 +1,15 @@
 function [ X_ ] = grad_ascent( D, rho, n )
+% Simplified Gradient Ascent for Visualize DBN
+%
+% Input Parameters:
+%               D:      learned DBN model using dbn.m from deepmat
+%               rho:    constraint of norm(x) during the gradient ascent
+%               n:      the index of visualizing unit
+%
+% Written by Giyoung Jeon
+% Probabilistic Artificial Intelligence Lab at UNIST
+% v1.1 April, 9th, 2015
+
     function [vh] = tarfun(X)
         vh = X;
         for l = 2:3

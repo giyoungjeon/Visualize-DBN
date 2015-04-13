@@ -1,3 +1,15 @@
+% Visulization of Deep Belief Network
+% Understanding Representations Learned in Deep Architectures, D. Erhan
+%
+% Sourced from deepmat:
+%                dbn.m
+%                dbn_mnist_D.mat
+%
+% Written by Giyoung Jeon
+% Probabilistic Artificial Intelligence Lab at UNIST
+% v1.0 April, 8th, 2015
+
+
 load('dbn_mnist_D.mat');
 
 rho=10;
